@@ -1,0 +1,69 @@
+{
+    "bg": "https://images8.alphacoders.com/101/1013167.jpg",
+    "title": "Tittulo do Quiz",
+    "description": "Descrição do seu quiz aqui",
+    "questions":[
+        {
+            "image": "https://placehold.it/400x400",
+            "title": "Questão número 01",
+            "description": "Descrição da questão número #01",
+            "anwser": 1,
+            "alternatives": [
+                "Alterinativa A",
+                "Alterinativa B",
+                "Alterinativa C",
+                "Alterinativa D"
+            ]
+        },
+        {
+            "image": "https://placehold.it/400x400",
+            "title": "Questão número 02",
+            "description": "Descrição da questão número #02",
+            "anwser": 2,
+            "alternatives": [
+                "Alterinativa A",
+                "Alterinativa B",
+                "Alterinativa C",
+                "Alterinativa D"
+            ]
+        },
+        {
+            "image": "https://placehold.it/400x400",
+            "title": "Questão número 03",
+            "description": "Descrição da questão número #03",
+            "anwser": 3,
+            "alternatives": [
+                "Alterinativa A",
+                "Alterinativa B",
+                "Alterinativa C",
+                "Alterinativa D"
+            ]
+        },
+        {
+            "image": "https://placehold.it/400x400",
+            "title": "Questão número 04",
+            "description": "Descrição da questão número #04",
+            "anwser": 4,
+            "alternatives": [
+                "Alterinativa A",
+                "Alterinativa B",
+                "Alterinativa C",
+                "Alterinativa D"
+            ]
+        }
+    ],
+    "external":[
+        "https://aluraquiz-v2-omariosouto.vercel.app/"
+    ],
+    "theme": {
+        "colors":{
+            "primary": "#FF9800",
+            "secondary": "#1C54B2",
+            "mainBg": "#1C1814",
+            "contrastText": "#FFFFFF",
+            "wrong": "#FF5722",
+            "sucess": "#4CAF50"
+        },
+        "borderRadius": "4px"
+    }
+}
