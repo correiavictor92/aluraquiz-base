@@ -8,7 +8,7 @@ const AlternativesForm = styled.form`
       &[data-selected="true"] {
           background-color: ${({ theme }) => theme.colors.primary};
           
-          &[data-status="SUCESS"] {
+          &[data-status="SUCCESS"] {
               background-color: ${({ theme }) => theme.colors.success};
           }
 
