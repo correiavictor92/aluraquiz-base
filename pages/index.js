@@ -48,6 +48,7 @@ export default function Home() {
             <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
+            <h4>{db.description}</h4>
             <form onSubmit={function (infosDoEvento) {
               infosDoEvento.preventDefault();
               router.push(`/quiz?name=${name}`);
@@ -61,7 +62,7 @@ export default function Home() {
                 value={name}
               />
               <Button type="submit" disabled={name.length === 0}>
-                {`Jogar ${name}`}
+                Jogar
               </Button>
             </form>
           </Widget.Content>
@@ -71,7 +72,7 @@ export default function Home() {
           <Widget.Content>
             <h1>Quiz da galera</h1>
 
-            <p>lorem ipsum dolor sit amet...</p>
+            <p>Dá uma olhada nesses quizes que o pessoal está fazendo na Imersão React:</p>
           </Widget.Content>
         </Widget>
         <Footer />
