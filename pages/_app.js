@@ -17,10 +17,10 @@ const GlobalStyle = createGlobalStyle`
     //Deixa branco no começo
     color: ${({ theme }) => theme.colors.contrastText};
   }
-  html, body{
+  html, body {
     min-height: 100vh;
   }
-  #_next{
+  #__next{
     flex: 1;
     display: flex;
     flex-direction: column;
