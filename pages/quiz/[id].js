@@ -1,10 +1,48 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable eol-last */
+/* eslint-disable linebreak-style */
+/* eslint-disable no-console */
+/* eslint-disable react/prop-types */
+/* eslint-disable space-before-blocks */
+/* eslint-disable linebreak-style */
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import QuizScreen from '../../src/screens/Quiz';
 
-export default function QuizDaGaleraPage() {
+export default function QuizDaGaleraPage({ dbExterno }) {
   return (
-    <div>
-      Desafio da proxima aula junto com as animações
-    </div>
+    <ThemeProvider theme={dbExterno.theme}>
+      <QuizScreen
+        externalQuestions={dbExterno.questions}
+        externalBg={dbExterno.bg}
+      />
+    </ThemeProvider>
+    // {/* <pre style={{ color: 'black'}}>
+    //  {JSON.stringify(dbExterno.questions, null, 4)}
+    // </pre> */}
   );
+}
+
+export async function getServerSideProps(context){
+  const [projectName, githubUser] = context.query.id.split('___');
+  const dbExterno = await fetch(`https://${projectName}.${githubUser}.vercel.app/api/db`)
+    .then((respostaDoServer) => {
+      if (respostaDoServer.ok){
+        return respostaDoServer.json();
+      }
+      throw new Error('Falha em pegar os dados');
+    })
+    .then((respostaConvertidaEmObjeto) => respostaConvertidaEmObjeto)
+    .catch((err) => {
+      console.log(err);
+    });
+
+  // console.log('dbExterno', dbExterno);
+  // console.log('Infos que o Next da para nós', context.query.id);
+
+  return {
+    props: {
+      dbExterno,
+    },
+  };
 }
